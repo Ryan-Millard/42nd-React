@@ -1,0 +1,176 @@
+/* Navbar Specific Styles */
+.navbar-container {
+  --navbar-text-primary: #FAA61A;
+  --navbar-text-secondary: #BBBBBB;
+  --navbar-bg-primary: #010101;
+  --navbar-bg-secondary: #FAA61A;
+  --navbar-transition-speed: 600ms;
+}
+
+.navbar {
+  z-index: 1;
+  position: fixed;
+  background-color: var(--navbar-bg-primary);
+  transition: width var(--navbar-transition-speed) ease;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar .nav-item {
+  width: 100%;
+}
+
+.navbar .nav-item:last-child {
+  margin-top: auto;
+}
+
+.navbar .nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  text-decoration: none;
+  color: var(--navbar-text-secondary);
+  transition: var(--navbar-transition-speed);
+}
+
+.navbar .nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  background: var(--navbar-bg-secondary);
+  color: black;
+}
+
+.navbar .link-text {
+  display: none;
+  margin-left: 1rem;
+}
+
+.navbar .nav-link svg {
+  width: 2rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+  fill: var(--navbar-text-secondary);
+}
+
+.navbar .logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: var(--navbar-text-secondary);
+  background: var(--navbar-bg-secondary);
+  font-size: 1.5rem;
+  letter-spacing: 0.3ch;
+  width: 100%;
+  position: relative;
+}
+
+.navbar .logo-text {
+  display: inline;
+  position: absolute;
+  left: -999px;
+  transition: var(--navbar-transition-speed);
+  text-align: left;
+  color: var(--navbar-bg-primary);
+}
+
+.nav-logo {
+	max-width: 30%;
+	/* Apply drop-shadow that follows the transparent parts */
+	filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+.logo-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.logo-tagline {
+  margin-left: 1rem;
+  color: var(--navbar-text-secondary);
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.navbar .bottom-spacer {
+  display: none;
+}
+
+/* Small screens */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+    overflow: scroll;
+  }
+
+  .navbar .bottom-spacer {
+    display: block;
+  }
+
+  .navbar .logo {
+    display: none;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .navbar .nav-link {
+    justify-content: center;
+  }
+
+  main {
+    margin: 0;
+  }
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+  .navbar {
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+  }
+
+  .navbar:hover {
+    width: 16rem;
+  }
+
+  .navbar:hover .link-text {
+    display: inline;
+  }
+
+  .navbar:hover .logo svg {
+    margin-left: 11rem;
+  }
+
+  .navbar:hover .logo-text {
+    left: 0px;
+  }
+}
+
+.navbar .nav-link:hover svg {
+  fill: #010101; /* This will change the icon color to the primary navbar text color on hover */
+}
+
+/* Targeting the arrow icon */
+.arrow-icon {
+  position: absolute;
+  right: 0; /* Position the arrow on the right side */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for rotation and color */
+}
+
+/* Hover effect on the parent link */
+.navbar:hover .arrow-icon {
+  transform: rotate(180deg); /* Rotate the arrow 180 degrees */
+}
