@@ -11,24 +11,26 @@ import Careers from "./Pages/Careers/Careers";
 
 import "./App.css";
 import "./index.css";
+import "./fonts.css";
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Navbar />
-	  <Header />
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/products-and-services" element={<ProductsAndServices />} />
-            <Route path="/careers" element={<Careers />} />
-          </Routes>
-        </main>
-      </div>
-    </Router>
+	<Router>
+		<div className="roboto">
+			<Navbar />
+			<Header />
+
+			<main>
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/contact" element={<Contact />} />
+					<Route path="/about" element={<About />} />
+					<Route path="/products-and-services" element={<ProductsAndServices />} />
+					<Route path="/careers" element={<Careers />} />
+				</Routes>
+			</main>
+		</div>
+	</Router>
   );
 }
 

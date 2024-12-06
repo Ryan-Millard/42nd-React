@@ -1,3 +1,29 @@
+:root {
+	--text-primary: #FAA61A;
+	--text-secondary: #BBBBBB;
+	--bg-primary: #010101;
+	--bg-secondary: #FAA61A;
+	--transition-speed: 600ms;
+}
+
+::selection {
+	background: #333333;
+	color: #FAA61A;
+}
+::-moz-selection {
+	background: #333333;
+	color: #FAA61A;
+}
+
+main {
+	background-color: var(--bg-primary);
+}
+
+h1, h2, h3 {
+	text-align: center;
+	color: var(--text-secondary);
+}
+
 /* Large screens */
 @media only screen and (min-width: 600px) {
 	/* Prevent the Navbar (on the side) from blocking main  content */
@@ -6,3 +32,4 @@
 		transition: margin-left var(--navbar-transition-speed) ease;
 	}
 }
+
