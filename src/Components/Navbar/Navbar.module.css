@@ -1,4 +1,3 @@
-/* Navbar Specific Styles */
 :root {
   --navbar-text-primary: #FAA61A;
   --navbar-text-secondary: #BBBBBB;
@@ -45,7 +44,7 @@
 
 .navLink:hover {
   background: var(--navbar-bg-secondary);
-  color: black;
+  color: var(--navbar-bg-primary);
   filter: grayscale(0%) opacity(1);
 }
 
@@ -192,7 +191,7 @@
 
 .active:hover {
   .linkText {
-    color: black;
+    color: var(--navbar-bg-primary);
   }
 }
 
