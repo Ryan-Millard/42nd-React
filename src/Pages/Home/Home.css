@@ -1,0 +1,49 @@
+/* Home.css */
+#home {
+	color: var(--text-secondary);
+	text-align: center;
+	padding: 20px;
+}
+
+h1 {
+	font-size: 2.5em;
+	margin-bottom: 20px;
+}
+
+#intro {
+	margin-top: 20px;
+}
+
+.content {
+	display: inline-block;
+	text-align: justify;
+	text-justify: inter-word;
+	margin: auto;
+	padding: 0 15%;
+}
+
+.heading {
+	font-weight: bold;
+	font-size: 1.2em;
+	margin-bottom: 10px;
+}
+
+ol {
+	list-style-position: inside;
+}
+
+ol li {
+	margin: 5px 0;
+	font-size: 1.1em;
+}
+
+@media (max-width: 768px) {
+	.content {
+		padding: 0 5%;
+	}
+
+	h1 {
+		font-size: 2em;
+	}
+}
+
