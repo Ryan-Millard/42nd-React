@@ -1,0 +1,20 @@
+.navbarWrapper {
+	width: 100%;
+	padding: 3px;
+	margin: 0;
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 70%, #010101), url("../../assets/card-background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	display:flex;
+	justify-content: space-evenly;
+	align-items: center;
+	padding-bottom: 1.5%;
+	color: #ECF0F1;
+	text-decoration: none;
+}
+
+.logo {
+	cursor: pointer;
+	height: 7dvh;
+	margin: 0;
+}

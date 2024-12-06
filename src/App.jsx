@@ -1,11 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 import Navbar from "./Components/Navbar/Navbar";
+import Header from "./Components/Header/Header";
 import Home from "./Pages/Home/Home";
 import Contact from "./Pages/Contact/Contact";
 import About from "./Pages/About/About";
 import ProductsAndServices from "./Pages/ProductsAndServices/ProductsAndServices";
 import Careers from "./Pages/Careers/Careers";
+
 import "./App.css";
 import "./index.css";
 
@@ -14,6 +17,7 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
+	  <Header />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
