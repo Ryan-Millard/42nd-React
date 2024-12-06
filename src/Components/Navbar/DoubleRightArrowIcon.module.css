@@ -1,0 +1,14 @@
+.faPrimary {
+	color: #ffd083;
+}
+
+.faSecondary {
+	color: #cf8a17;
+}
+
+/* Ensure the arrow icon has the right transition */
+.arrowIcon {
+  position: absolute;
+  right: 0;
+}
+

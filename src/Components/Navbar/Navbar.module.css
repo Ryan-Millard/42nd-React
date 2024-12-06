@@ -1,5 +1,5 @@
 /* Navbar Specific Styles */
-.navbar-container {
+:root {
   --navbar-text-primary: #FAA61A;
   --navbar-text-secondary: #BBBBBB;
   --navbar-bg-primary: #010101;
@@ -12,9 +12,11 @@
   position: fixed;
   background-color: var(--navbar-bg-primary);
   transition: width var(--navbar-transition-speed) ease;
+  overflow: hidden;
+  height: 100%;
 }
 
-.navbar-nav {
+.navbarNav {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -24,45 +26,45 @@
   height: 100%;
 }
 
-.navbar .nav-item {
+.navItem {
   width: 100%;
 }
 
-.navbar .nav-item:last-child {
+.navItem:last-child {
   margin-top: auto;
 }
 
-.navbar .nav-link {
+.navLink {
   display: flex;
   align-items: center;
   height: 5rem;
   text-decoration: none;
   color: var(--navbar-text-secondary);
-  transition: var(--navbar-transition-speed);
+  transition: background var(--navbar-transition-speed) ease, color var(--navbar-transition-speed) ease;
 }
 
-.navbar .nav-link:hover {
-  filter: grayscale(0%) opacity(1);
+.navLink:hover {
   background: var(--navbar-bg-secondary);
   color: black;
+  filter: grayscale(0%) opacity(1);
 }
 
-.navbar .link-text {
-  display: none;
+.linkText {
+  display: none; /* Hidden by default */
   margin-left: 1rem;
 }
 
-.navbar .nav-link svg {
+.navLink svg {
   width: 2rem;
   min-width: 2rem;
   margin: 0 1.5rem;
   fill: var(--navbar-text-secondary);
+  transition: fill var(--navbar-transition-speed);
 }
 
-.navbar .logo {
+.logo {
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 1rem;
   text-align: center;
   color: var(--navbar-text-secondary);
   background: var(--navbar-bg-secondary);
@@ -70,37 +72,31 @@
   letter-spacing: 0.3ch;
   width: 100%;
   position: relative;
+  margin-bottom: 1rem;
 }
 
-.navbar .logo-text {
-  display: inline;
-  position: absolute;
-  left: -999px;
-  transition: var(--navbar-transition-speed);
-  text-align: left;
+.logoImgContainer {
+  display: none;
+  transition: left var(--navbar-transition-speed);
   color: var(--navbar-bg-primary);
+  overflow: hidden;
 }
 
-.nav-logo {
-	max-width: 30%;
-	/* Apply drop-shadow that follows the transparent parts */
-	filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+.logoImgContainer img {
+	height: 4rem;
 }
 
-.logo-content {
+.logoImgContainer p {
+	font-size: 50%;
+}
+
+.logoContent {
   display: flex;
   align-items: center;
   width: 100%;
 }
 
-.logo-tagline {
-  margin-left: 1rem;
-  color: var(--navbar-text-secondary);
-  font-size: 0.9rem;
-  white-space: nowrap;
-}
-
-.navbar .bottom-spacer {
+.bottomSpacer {
   display: none;
 }
 
@@ -110,22 +106,22 @@
     bottom: 0;
     width: 100vw;
     height: 5rem;
-    overflow: scroll;
+    overflow-x: auto;
   }
 
-  .navbar .bottom-spacer {
+  .bottomSpacer {
     display: block;
   }
 
-  .navbar .logo {
+  .logo {
     display: none;
   }
 
-  .navbar-nav {
+  .navbarNav {
     flex-direction: row;
   }
 
-  .navbar .nav-link {
+  .navLink {
     justify-content: center;
   }
 
@@ -146,31 +142,57 @@
     width: 16rem;
   }
 
-  .navbar:hover .link-text {
-    display: inline;
+  .navbar:hover .logoImgContainer {
+	  display: flex;
+	  justify-content: space-evenly;
+	  align-items: center;      /* Vertically center */
+	  width: 80%;
+  }
+
+  .navbar:hover .linkText {
+    display: inline; /* Show the text when expanded */
   }
 
   .navbar:hover .logo svg {
     margin-left: 11rem;
   }
 
-  .navbar:hover .logo-text {
-    left: 0px;
+  .navbar:hover .logoImgContainer {
+    left: 0;
+  }
+
+  /* Ensure text is hidden by default */
+  .linkText {
+    display: none;
   }
 }
 
-.navbar .nav-link:hover svg {
-  fill: #010101; /* This will change the icon color to the primary navbar text color on hover */
+.navLink:hover svg {
+  fill: #010101;
 }
 
 /* Targeting the arrow icon */
-.arrow-icon {
-  position: absolute;
-  right: 0; /* Position the arrow on the right side */
-  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for rotation and color */
+.arrowIcon {
+  transition: rotate calc(var(--navbar-transition-speed) * 1.66) ease; /* Multiply by 1.66 to make it about 1000ms */
 }
 
-/* Hover effect on the parent link */
-.navbar:hover .arrow-icon {
-  transform: rotate(180deg); /* Rotate the arrow 180 degrees */
+.navbar:hover .arrowIcon {
+  transform: rotate(180deg);
 }
+
+.active {
+  .linkText {
+    color: var(--navbar-bg-secondary);
+  }
+
+  svg {
+    fill: var(--navbar-bg-secondary);
+  }
+}
+
+.active:hover {
+  .linkText {
+    color: black;
+  }
+}
+

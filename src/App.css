@@ -1,12 +1,8 @@
 /* Large screens */
-/* Prevent the Navbar (on the side) from blocking main  content */
 @media only screen and (min-width: 600px) {
+	/* Prevent the Navbar (on the side) from blocking main  content */
 	main {
 		margin-left: 5rem; /* Default navbar width */
 		transition: margin-left var(--navbar-transition-speed) ease;
-	}
-
-	.navbar:hover + main {
-		margin-left: 16rem; /* Expanded navbar width */
 	}
 }
