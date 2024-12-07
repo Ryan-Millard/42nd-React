@@ -6,22 +6,25 @@ import styles from "./Navbar.module.css";
 import logo from '../../assets/42nd-precinct-logo.png';
 
 const Navbar = () => {
-  return (
+	return (
 	<nav className={styles.navbar}>
-	  <ul className={styles.navbarNav}>
+		<ul className={styles.navbarNav}>
 		{/* Logo Section */}
 		<li className={styles.logo}>
-		  <Link to="/" className={styles.navLink}>
-			<div className={styles.logoContent}>
-				<span className={styles.logoImgContainer}>
-					<img src={logo} alt="Logo" />
-					<span>
-						<p>Honesty </p><p>Integrity </p><p>Trust</p>
+			<div className={styles.navLink}>
+				<div className={styles.logoContent}>
+					<span className={styles.logoImgContainer}>
+						<Link to="/">
+							<img src={logo} alt="Logo" />
+						</Link>
+
+						<span>
+							<p>Honesty </p><p>Integrity </p><p>Trust</p>
+						</span>
 					</span>
-				</span>
+				</div>
+				<DoubleRightArrowIcon className={styles.arrowIcon} />
 			</div>
-			<DoubleRightArrowIcon className={styles.arrowIcon} />
-		 </Link>
 		</li>
 
 		{/* Navigation Items */}
@@ -33,27 +36,26 @@ const Navbar = () => {
 
 		{/* Spacer for bottom */}
 		<li className={styles.bottomSpacer}></li>
-	  </ul>
+		</ul>
 	</nav>
-  );
+	);
 };
 
 // NavItem component to reduce redundancy
 const NavItem = ({ to, icon, label }) => {
-  return (
+	return (
 	<li className={styles.navItem}>
-	  <NavLink
+		<NavLink
 		to={to}
 		className={({ isActive }) =>
-		  isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
+			isActive ? `${styles.navLink} ${styles.active}` : styles.navLink
 		}
-	  >
+		>
 		{icon}
 		<span className={styles.linkText}>{label}</span>
-	  </NavLink>
+		</NavLink>
 	</li>
-  );
+	);
 };
 
 export default Navbar;
-
