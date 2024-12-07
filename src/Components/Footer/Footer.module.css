@@ -1,0 +1,47 @@
+.footerWrapper {
+	width: 100%;
+	padding: 3px;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0) 10%, #010101),
+	url("../../assets/card-background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	padding-top: 1.5%;
+	height: fit-content;
+}
+
+.footerLinks {
+	text-align: center;
+	margin: 0 2%;
+	width: 100%;
+	list-style-type: none;
+	padding: 0;
+}
+
+.multiElementsPerLine {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.smallLogo {
+	cursor: pointer;
+	height: 7dvh;
+	margin: 0;
+}
+
+.icon {
+	fill: #ecf0f1;
+	transition: all 0.3s ease;
+	max-height: 38.4px;
+	border-radius: 45px;
+	max-width: fit-content;
+}
+
+.icon:hover,
+.icon:active {
+	fill: #faa61a;
+}
+
