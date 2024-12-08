@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Navbar from "./Components/Navbar/Navbar";
 import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
+
 import Home from "./Pages/Home/Home";
 import Contact from "./Pages/Contact/Contact";
 import About from "./Pages/About/About";
@@ -14,24 +16,26 @@ import "./index.css";
 import "./fonts/roboto.css";
 
 function App() {
-  return (
-	<Router>
-		<div className="roboto">
-			<Navbar />
-			<Header />
+	return (
+		<Router>
+			<div className="roboto">
+				<Navbar />
+				<Header />
 
-			<main>
-				<Routes>
-					<Route path="/" element={<Home />} />
-					<Route path="/contact" element={<Contact />} />
-					<Route path="/about" element={<About />} />
-					<Route path="/products-and-services" element={<ProductsAndServices />} />
-					<Route path="/careers" element={<Careers />} />
-				</Routes>
-			</main>
-		</div>
-	</Router>
-  );
+				<main>
+					<Routes>
+						<Route path="/" element={<Home />} />
+						<Route path="/contact" element={<Contact />} />
+						<Route path="/about" element={<About />} />
+						<Route path="/products-and-services" element={<ProductsAndServices />} />
+						<Route path="/careers" element={<Careers />} />
+					</Routes>
+				</main>
+
+				<Footer />
+			</div>
+		</Router>
+	);
 }
 
 export default App;

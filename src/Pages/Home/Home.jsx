@@ -1,6 +1,7 @@
 import React from "react";
 import '../../App.css';
 import './Home.css';
+import BusinessCard from './../../Components/BusinessCard/BusinessCard';
 
 const ClientList = () => (
 	<ol>
@@ -24,6 +25,8 @@ const Home = () => {
 			  <ClientList />
 			</div>
 		</div>
+
+		<BusinessCard />
 	</section>
   );
 };

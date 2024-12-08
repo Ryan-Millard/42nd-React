@@ -1,0 +1,54 @@
+.back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hides the back when the front is visible and vice versa */
+  transform: rotateY(180deg); /* Position the back for the flip */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backWrapper {
+	max-height: 193px;
+	background: black;
+	font-family: Arial;
+}
+.backWrapper p {
+	color: #FAA61A;
+	text-align: center;
+	font-size: 70%;
+}
+@media (min-width: 601px) {
+	.backWrapper {
+		max-width: 360px;
+		height: calc(360px * 5 / 9); /* This maintains a 9:5 width:height ratio */
+	}
+}
+@media (max-width: 600px) {
+	.backWrapper {
+		max-width: 100%;
+		max-height: calc(100% * 5 / 9); /* This maintains a 9:5 width:height ratio */
+	}
+}
+
+.backFooter {
+	color: #FAA61A;
+	font-size: 80%;
+}
+
+.backContent {
+	font-size: 70%;
+	margin-top: 3%;
+	background-color: #FAA61A;
+	color: black;
+	display: flex;
+	justify-content: flex-start;
+	padding: 1% 2%;
+}
+.backContent ul {
+	text-align: left;
+	padding: 0;
+	padding-left: 5%;
+	margin: 0;
+}
+

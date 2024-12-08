@@ -1,0 +1,16 @@
+.cardContainer {
+	perspective: 1000px; /* Enables 3D space for flipping */
+	cursor: pointer;
+	display: inline-block;
+}
+
+.card {
+	width: fit-content;
+	height: fit-content;
+	transform-style: preserve-3d; /* Ensures child elements retain their 3D positioning */
+	transition: transform 0.6s; /* Smooth transition for the flip */
+}
+
+.flipped {
+	transform: rotateY(180deg); /* Flip the card */
+}

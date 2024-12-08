@@ -1,0 +1,110 @@
+.front {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	border-radius: 8px;
+	backface-visibility: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: left;
+}
+
+.frontWrapper {
+	font-family: Arial;
+	height: 100%;
+	font-size: 85%;
+	background-image: url("../../../../assets/card-background.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+}
+@media (min-width: 601px) {
+	.frontWrapper {
+		max-width: 360px;
+		max-height: calc(360 * 5 / 9); /* This maintains a 9:5 width:height ratio */
+	}
+}
+
+.frontBody {
+	margin: 0;
+	width: 50%;
+	color: #FAA61A;
+	flex: 1;
+	padding: 2.5%;
+}
+#frontLeftBody { overflow: hidden; }
+#frontRightBody {
+	overflow: hidden;
+	padding-right: 0;
+}
+
+.frontLogo {
+	width: 90%;
+	margin-bottom: 5%;
+}
+
+.frontFooter {
+	position: absolute;
+	bottom: 5%;
+}
+#frontFooterLeft {
+	font-size: 100%;
+}
+@media (min-width: 601px) {
+	.frontFooter {
+		font-size: 79%;
+	}
+}
+@media (max-width: 600px) {
+	#frontFooterRight {
+		font-size: 75%;
+	}
+}
+@media (max-width: 376px) {
+	.frontFooter {
+		bottom: 10%;
+	}
+	#frontFooterLeft {
+		font-size: 95%;
+	}
+	#frontFooterRight {
+		font-size: 75%;
+	}
+}
+
+.frontTitle {
+	margin: 6% 0;
+	margin-top: 2%;
+	background: #FAA61A;
+	color: black;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	line-height: 0.9;
+	padding: 3%;
+}
+.frontTitle * {
+	margin: 0;
+}
+.frontTitle #subtitle {
+	padding-top: 1%;
+	font-size: 80%;
+}
+
+.frontContactDetails ul {
+	list-style: none;
+	padding: 0;
+}
+@media (min-width: 601px) {
+	.frontContactDetails {
+		color: white;
+		font-size: 80%;
+	}
+}
+@media (max-width: 600px) {
+	.frontContactDetails {
+		color: white;
+		font-size: 80%;
+		height: 50%;
+	}
+}
