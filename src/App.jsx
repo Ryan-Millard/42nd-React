@@ -20,19 +20,22 @@ function App() {
 		<Router>
 			<div className="roboto">
 				<Navbar />
-				<Header />
 
-				<main>
-					<Routes>
-						<Route path="/" element={<Home />} />
-						<Route path="/contact" element={<Contact />} />
-						<Route path="/about" element={<About />} />
-						<Route path="/products-and-services" element={<ProductsAndServices />} />
-						<Route path="/careers" element={<Careers />} />
-					</Routes>
-				</main>
+				<div className="pageContainer">
+					<Header />
 
-				<Footer />
+					<main>
+						<Routes>
+							<Route path="/" element={<Home />} />
+							<Route path="/contact" element={<Contact />} />
+							<Route path="/about" element={<About />} />
+							<Route path="/products-and-services" element={<ProductsAndServices />} />
+							<Route path="/careers" element={<Careers />} />
+						</Routes>
+					</main>
+
+					<Footer />
+				</div>
 			</div>
 		</Router>
 	);
