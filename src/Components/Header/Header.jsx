@@ -4,8 +4,8 @@ import logo from '../../assets/42nd-precinct-logo.png';
 
 const Header = () => {
   return (
-    <header className={styles.navbarWrapper}>
-      <a href="index.html">
+    <header className={styles.headerWrapper}>
+      <a href="/">
         <img className={styles.logo} src={logo} alt="logo" />
       </a>
     </header>

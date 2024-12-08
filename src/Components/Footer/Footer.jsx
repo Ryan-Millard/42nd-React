@@ -7,32 +7,32 @@ const Footer = () => {
 	return (
 		<footer className={styles.footerWrapper}>
 			<div className={styles.footerLinks}>
-				<div className={styles.multiElementsPerLine}>
-					<div>
-						<a
-							href="https://www.instagram.com/42ndprecinctsecurity?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<FaInstagram className={styles.icon} size={200} />
-						</a>
-					</div>
-					<a href="index.html">
+				<div className={styles.iconContainer}>
+					<a
+						href="https://www.instagram.com/42ndprecinctsecurity"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="Instagram"
+					>
+						<FaInstagram className={styles.icon} size={40} />
+					</a>
+
+					<a href="/" aria-label="Homepage">
 						<img
-							className={styles.smallLogo}
+							className={styles.logo}
 							src={logo}
-							alt="Logo"
+							alt="42nd Precinct Security Logo"
 						/>
 					</a>
-					<div>
-						<a
-							href="https://www.facebook.com/42ndprecinct"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<FaFacebook className={styles.icon} size={200} />
-						</a>
-					</div>
+
+					<a
+						href="https://www.facebook.com/42ndprecinct"
+						target="_blank"
+						rel="noopener noreferrer"
+						aria-label="Facebook"
+					>
+						<FaFacebook className={styles.icon} size={40} />
+					</a>
 				</div>
 			</div>
 		</footer>
@@ -40,3 +40,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

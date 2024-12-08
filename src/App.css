@@ -40,7 +40,6 @@ h1, h2, h3 {
 	/* Prevent the Navbar (on the side) from blocking main  content */
 	main {
 		margin-left: 5rem; /* Default navbar width */
-		transition: margin-left var(--navbar-transition-speed) ease;
 	}
 }
 

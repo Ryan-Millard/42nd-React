@@ -1,47 +1,45 @@
 .footerWrapper {
-	width: 100%;
-	padding: 3px;
-	background: linear-gradient(to top, rgba(0, 0, 0, 0) 10%, #010101),
-	url("../../assets/card-background.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
+	padding: 1% 0;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.3), #010101),
+		url("../../assets/card-background.jpg") no-repeat center center/cover;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: center;
 	align-items: center;
-	padding-top: 1.5%;
-	height: fit-content;
+	height: auto;
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+	.footerWrapper {
+		margin-left: 5rem; /* Offset for sidebar */
+	}
 }
 
 .footerLinks {
 	text-align: center;
-	margin: 0 2%;
 	width: 100%;
-	list-style-type: none;
-	padding: 0;
+	padding: 0 2%;
 }
 
-.multiElementsPerLine {
+.iconContainer {
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: space-evenly;
+	align-items: center;
+	width: 100%;
 }
 
-.smallLogo {
+.logo {
 	cursor: pointer;
 	height: 7dvh;
-	margin: 0;
+	max-height: 100px;
 }
 
 .icon {
-	fill: #ecf0f1;
-	transition: all 0.3s ease;
-	max-height: 38.4px;
-	border-radius: 45px;
-	max-width: fit-content;
+	color: #ecf0f1;
+	transition: color 0.3s ease;
 }
 
-.icon:hover,
-.icon:active {
-	fill: #faa61a;
+.icon:hover {
+	color: #faa61a;
 }
 
