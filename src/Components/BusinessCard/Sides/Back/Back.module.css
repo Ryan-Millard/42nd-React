@@ -14,7 +14,7 @@
 	font-family: Arial;
 }
 .backWrapper p {
-	color: #FAA61A;
+	color: var(--text-primary);
 	text-align: center;
 	font-size: 70%;
 }
@@ -32,14 +32,14 @@
 }
 
 .backFooter {
-	color: #FAA61A;
+	color: var(--text-primary);
 	font-size: 80%;
 }
 
 .backContent {
 	font-size: 70%;
 	margin-top: 3%;
-	background-color: #FAA61A;
+	background-color: var(--text-primary);
 	color: black;
 	display: flex;
 	justify-content: flex-start;

@@ -1,6 +1,6 @@
 .footerWrapper {
 	padding: 1% 0;
-	background: linear-gradient(to top, rgba(0, 0, 0, 0.3), #010101),
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.3), var(--bg-primary)),
 		url("../../assets/card-background.jpg") no-repeat center center/cover;
 	display: flex;
 	justify-content: center;
@@ -43,11 +43,11 @@
 }
 
 .icon {
-	color: #ecf0f1;
+	color: var(--text-secondary);
 	transition: color 0.3s ease;
 }
 
 .icon:hover {
-	color: #faa61a;
+	color: var(--text-primary);
 }
 

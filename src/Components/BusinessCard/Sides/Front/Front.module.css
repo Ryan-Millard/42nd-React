@@ -29,7 +29,7 @@
 .frontBody {
 	margin: 0;
 	width: 50%;
-	color: #FAA61A;
+	color: var(--text-primary);
 	flex: 1;
 	padding: 2.5%;
 }
@@ -76,7 +76,7 @@
 .frontTitle {
 	margin: 6% 0;
 	margin-top: 2%;
-	background: #FAA61A;
+	background: var(--text-primary);
 	color: black;
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
