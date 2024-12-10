@@ -1,84 +1,76 @@
-:root {
-  --navbar-text-primary: #FAA61A;
-  --navbar-text-secondary: #BBBBBB;
-  --navbar-bg-primary: #010101;
-  --navbar-bg-secondary: #FAA61A;
-  --navbar-transition-speed: 600ms;
-}
-
 .navbar {
-  z-index: 1;
-  position: fixed;
-  background-color: var(--navbar-bg-primary);
-  transition: width var(--navbar-transition-speed) ease;
-  overflow: hidden;
-  height: 100%;
+	z-index: 1;
+	position: fixed;
+	background-color: var(--bg-primary);
+	transition: width var(--transition-speed) ease;
+	overflow: hidden;
+	height: 100%;
 }
 
 .navbarNav {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
 }
 
 .navItem {
-  width: 100%;
+	width: 100%;
 }
 
 .navItem:last-child {
-  margin-top: auto;
+	margin-top: auto;
 }
 
 .navLink {
-  display: flex;
-  align-items: center;
-  height: 5rem;
-  text-decoration: none;
-  color: var(--navbar-text-secondary);
-  transition: background var(--navbar-transition-speed) ease, color var(--navbar-transition-speed) ease;
+	display: flex;
+	align-items: center;
+	height: 5rem;
+	text-decoration: none;
+	color: var(--text-secondary);
+	transition: background var(--transition-speed) ease, color var(--transition-speed) ease;
 }
 
 .navLink:hover {
-  background: var(--navbar-bg-secondary);
-  color: var(--navbar-bg-primary);
-  filter: grayscale(0%) opacity(1);
+	background: var(--bg-secondary);
+	color: var(--bg-primary);
+	filter: grayscale(0%) opacity(1);
 }
 
 .linkText {
-  display: none; /* Hidden by default */
-  margin-left: 1rem;
+	display: none; /* Hidden by default */
+	margin-left: 1rem;
 }
 
 .navLink svg {
-  width: 2rem;
-  min-width: 2rem;
-  margin: 0 1.5rem;
-  fill: var(--navbar-text-secondary);
-  transition: fill var(--navbar-transition-speed);
+	width: 2rem;
+	min-width: 2rem;
+	margin: 0 1.5rem;
+	fill: var(--text-secondary);
+	transition: fill var(--transition-speed);
 }
 
 .logo {
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  color: var(--navbar-text-secondary);
-  background: var(--navbar-bg-secondary);
-  font-size: 1.5rem;
-  letter-spacing: 0.3ch;
-  width: 100%;
-  position: relative;
-  margin-bottom: 1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	color: var(--text-secondary);
+	background: var(--bg-secondary);
+	font-size: 1.5rem;
+	letter-spacing: 0.3ch;
+	width: 100%;
+	position: relative;
+	margin-bottom: 1rem;
 }
 
 .logoImgContainer {
-  display: none;
-  transition: left var(--navbar-transition-speed);
-  color: var(--navbar-bg-primary);
-  overflow: hidden;
+	display: none;
+	transition: left var(--transition-speed);
+	color: var(--bg-primary);
+	overflow: hidden;
 }
 
 .logoImgContainer img {
@@ -90,108 +82,108 @@
 }
 
 .logoContent {
-  display: flex;
-  align-items: center;
-  width: 100%;
+	display: flex;
+	align-items: center;
+	width: 100%;
 }
 
 .bottomSpacer {
-  display: none;
+	display: none;
 }
 
 /* Small screens */
 @media only screen and (max-width: 600px) {
-  .navbar {
-    bottom: 0;
-    width: 100vw;
-    height: 5rem;
-    overflow-x: auto;
-  }
+	.navbar {
+		bottom: 0;
+		width: 100vw;
+		height: 5rem;
+		overflow-x: auto;
+	}
 
-  .bottomSpacer {
-    display: block;
-  }
+	.bottomSpacer {
+		display: block;
+	}
 
-  .logo {
-    display: none;
-  }
+	.logo {
+		display: none;
+	}
 
-  .navbarNav {
-    flex-direction: row;
-  }
+	.navbarNav {
+		flex-direction: row;
+	}
 
-  .navLink {
-    justify-content: center;
-  }
+	.navLink {
+		justify-content: center;
+	}
 
-  main {
-    margin: 0;
-  }
+	main {
+		margin: 0;
+	}
 }
 
 /* Large screens */
 @media only screen and (min-width: 600px) {
-  .navbar {
-    top: 0;
-    width: 5rem;
-    height: 100vh;
-  }
+	.navbar {
+		top: 0;
+		width: 5rem;
+		height: 100vh;
+	}
 
-  .navbar:hover {
-    width: 16rem;
-  }
+	.navbar:hover {
+		width: 16rem;
+	}
 
-  .navbar:hover .logoImgContainer {
-	  display: flex;
-	  justify-content: space-evenly;
-	  align-items: center;      /* Vertically center */
-	  width: 80%;
-  }
+	.navbar:hover .logoImgContainer {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;      /* Vertically center */
+		width: 80%;
+	}
 
-  .navbar:hover .linkText {
-    display: inline; /* Show the text when expanded */
-  }
+	.navbar:hover .linkText {
+		display: inline; /* Show the text when expanded */
+	}
 
-  .navbar:hover .logo svg {
-    margin-left: 11rem;
-  }
+	.navbar:hover .logo svg {
+		margin-left: 11rem;
+	}
 
-  .navbar:hover .logoImgContainer {
-    left: 0;
-  }
+	.navbar:hover .logoImgContainer {
+		left: 0;
+	}
 
-  /* Ensure text is hidden by default */
-  .linkText {
-    display: none;
-  }
+	/* Ensure text is hidden by default */
+	.linkText {
+		display: none;
+	}
 }
 
 .navLink:hover svg {
-  fill: #010101;
+	fill: var(--bg-primary);
 }
 
 /* Targeting the arrow icon */
 .arrowIcon {
-  transition: rotate calc(var(--navbar-transition-speed) * 1.66) ease; /* Multiply by 1.66 to make it about 1000ms */
+	transition: rotate calc(var(--transition-speed) * 1.66) ease; /* Multiply by 1.66 to make it about 1000ms */
 }
 
 .navbar:hover .arrowIcon {
-  transform: rotate(180deg);
+	transform: rotate(180deg);
 }
 
 .active {
-  .linkText {
-    color: var(--navbar-bg-secondary);
-  }
+	.linkText {
+		color: var(--bg-secondary);
+	}
 
-  svg {
-    fill: var(--navbar-bg-secondary);
-  }
+	svg {
+		fill: var(--bg-secondary);
+	}
 }
 
 .active:hover {
-  .linkText {
-    color: var(--navbar-bg-primary);
-  }
+	.linkText {
+		color: var(--bg-primary);
+	}
 }
 
