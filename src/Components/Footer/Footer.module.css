@@ -15,6 +15,14 @@
 	}
 }
 
+/* Adjustments for small screens with bottom navbar */
+@media only screen and (max-width: 599px) {
+	.footerWrapper {
+		padding-bottom: 5rem; /* Add extra padding to account for bottom navbar */
+		margin-bottom: 0; /* Ensure no extra space at the bottom */
+	}
+}
+
 .footerLinks {
 	text-align: center;
 	width: 100%;
