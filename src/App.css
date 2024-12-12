@@ -62,8 +62,3 @@ h1 { font-size: 2em; }
 hr {
 	margin: 30px 10px;
 }
-
-.section-text {
-	line-height: 1.6;
-	letter-spacing: 0.05em;
-}
