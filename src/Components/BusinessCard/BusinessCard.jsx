@@ -11,7 +11,7 @@ const BusinessCard = () => {
 	};
 
 	return (
-		<section className={styles.componentContainer}>
+		<aside className={styles.componentContainer}>
 			<h2 className={`text-primary ${styles.heading}`}>Click to flip the card</h2>
 			<div className={styles.cardContainer} onClick={toggleFlip}>
 				<div className={`${styles.card} ${isFlipped ? styles.flipped : ''}`}>
@@ -19,7 +19,7 @@ const BusinessCard = () => {
 					<Back />
 				</div>
 			</div>
-		</section>
+		</aside>
 	);
 };
 
