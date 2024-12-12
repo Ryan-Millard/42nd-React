@@ -11,15 +11,15 @@ const BusinessCard = () => {
 	};
 
 	return (
-		<div>
-			<h2 className="text-primary">Click to flip the card</h2>
+		<section className={styles.componentContainer}>
+			<h2 className={`text-primary ${styles.heading}`}>Click to flip the card</h2>
 			<div className={styles.cardContainer} onClick={toggleFlip}>
 				<div className={`${styles.card} ${isFlipped ? styles.flipped : ''}`}>
 					<Front />
 					<Back />
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };
 

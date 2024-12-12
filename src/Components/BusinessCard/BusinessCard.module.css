@@ -1,11 +1,24 @@
+.componentContainer {
+	text-align: center;
+	display: flex;
+	flex-direction: column; /* Stack elements vertically */
+	justify-content: center; /* Horizontally center the card */
+	align-items: center; /* Center the contents horizontally */
+}
+
+.heading {
+	max-width: fit-content;
+	margin-bottom: 2%; /* Add some space between the heading and the card */
+}
+
 .cardContainer {
 	perspective: 1000px; /* Enables 3D space for flipping */
 	cursor: pointer;
 	display: inline-block;
+	text-align: center;
 }
 
 .card {
-	width: fit-content;
 	height: fit-content;
 	transform-style: preserve-3d; /* Ensures child elements retain their 3D positioning */
 	transition: transform 0.6s; /* Smooth transition for the flip */
@@ -14,3 +27,4 @@
 .flipped {
 	transform: rotateY(180deg); /* Flip the card */
 }
+
