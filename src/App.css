@@ -4,7 +4,28 @@
 	--text-tertiary: #333333;
 	--bg-primary: #010101;
 	--bg-secondary: #FAA61A;
+	--bg-tertiary: #1A1A1A;
 	--transition-speed: 600ms;
+}
+
+* {
+	margin: 0;		/* Remove React's default margin */
+}
+
+html, body {
+	height: 100%;
+	color: var(--text-secondary);
+}
+
+main {
+	background-color: var(--bg-primary);
+	padding: 3%;
+}
+@media only screen and (min-width: 600px) {
+	/* Prevent the Navbar (on the side) from blocking main  content */
+	main {
+		margin-left: 5rem; /* Default navbar width */
+	}
 }
 
 /* Text color utilities */
@@ -28,25 +49,16 @@
 	color: var(--text-primary);
 }
 
-main {
-	background-color: var(--bg-primary);
-}
-
-h1, h2, h3 {
-	text-align: center;
-}
-
-/* Large screens */
-@media only screen and (min-width: 600px) {
-	/* Prevent the Navbar (on the side) from blocking main  content */
-	main {
-		margin-left: 5rem; /* Default navbar width */
-	}
-}
+h1, h2, h3 { text-align: center; }
+h1 { font-size: 2em; }
 
 /* Use grid to create a full-height layout */
 .pageContainer {
 	display: grid;
 	grid-template-rows: auto 1fr auto;
 	min-height: 100vh;
+}
+
+hr {
+	margin: 30px 10px;
 }
