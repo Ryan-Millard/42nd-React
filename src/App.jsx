@@ -12,7 +12,6 @@ import ProductsAndServices from "./Pages/ProductsAndServices/ProductsAndServices
 import Careers from "./Pages/Careers/Careers";
 
 import "./App.css";
-import "./index.css";
 import "./fonts/roboto.css";
 
 function App() {

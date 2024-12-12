@@ -62,3 +62,13 @@ h1 { font-size: 2em; }
 hr {
 	margin: 30px 10px;
 }
+
+.section-text {
+	line-height: 1.6;
+	letter-spacing: 0.05em;
+}
+/* Apply styles to all lines except the last one */
+.section-text::last-line {
+    line-height: normal; /* Default line-height for the last line */
+    letter-spacing: normal; /* Default letter-spacing for the last line */
+}
