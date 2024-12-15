@@ -1,6 +1,6 @@
 import styles from './ClientList.module.css';
 
-const ClientList = () => {
+const ClientList = ({className}) => {
 	const clients = [
 		'Complexes',
 		'Schools',
@@ -11,9 +11,9 @@ const ClientList = () => {
 	];
 
 	return (
-		<ol aria-label="Client Types">
+		<ol className={className} aria-label="Client Types">
 			{clients.map((client, index) => (
-			<li key={index}>{client}</li>
+				<li key={index}>{client}</li>
 			))}
 		</ol>
 	);

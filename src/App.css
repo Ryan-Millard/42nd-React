@@ -48,7 +48,6 @@ main {
 }
 
 h1, h2, h3 { text-align: center; }
-h1 { font-size: 2em; }
 
 /* Use grid to create a full-height layout */
 .pageContainer {
@@ -58,7 +57,7 @@ h1 { font-size: 2em; }
 }
 
 hr {
-	margin: 8% 2%;
+	margin: 4% 2%;
 }
 
 .section {

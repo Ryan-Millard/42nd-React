@@ -3,17 +3,20 @@ import ClientList from './ClientList';
 import styles from './ClientListSection.module.css';
 
 const ClientListSection = () => (
-	<section className="section">
+	<section className={`section ${styles.flexSection}`}>
 		<figure>
 			<img src={responseOfficerSalute} alt="Hero Image" />
 			<figcaption>Reaction officer on standby in Randpark Ridge.</figcaption>
 		</figure>
 
-		<div className={styles.content}>
-			<h2 className="roboto-black">The spectrum of our clients we deal with are:</h2>
-			<ClientList />
-		</div>
+		<article>
+			<div className={styles.content}>
+				<h2>The spectrum of our clients we deal with are:</h2>
+				<ClientList className="section-text" />
+			</div>
+		</article>
 	</section>
 );
 
 export default ClientListSection;
+
