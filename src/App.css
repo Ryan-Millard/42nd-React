@@ -4,17 +4,15 @@
 	--text-tertiary: #333333;
 	--bg-primary: #010101;
 	--bg-secondary: #FAA61A;
+	--bg-secondary-transparent: rgba(250, 166, 26, 0.5);
 	--bg-tertiary: #1A1A1A;
 	--transition-speed: 600ms;
-}
-
-* {
-	margin: 0;		/* Remove React's default margin */
 }
 
 html, body {
 	height: 100%;
 	color: var(--text-secondary);
+	margin: 0;
 }
 
 main {
@@ -63,12 +61,32 @@ hr {
 	margin: 30px 10px;
 }
 
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .section-text {
 	line-height: 1.6;
 	letter-spacing: 0.05em;
+	margin: 0;
 }
-/* Apply styles to all lines except the last one */
-.section-text::last-line {
-    line-height: normal; /* Default line-height for the last line */
-    letter-spacing: normal; /* Default letter-spacing for the last line */
+
+/* For Link elements from react-router-dom */
+.link {
+	text-decoration: none;
+	color: var(--text-secondary);
+	background-color: var(--bg-secondary-transparent);
+	padding: 0.5% 1%;
+	border-radius: 5px;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 auto;
+	text-align: center;
+	font-weight: bold;
+}
+.link:hover {
+	color: var(--text-tertiary);
+	background-color: var(--bg-secondary);
 }

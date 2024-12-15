@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './IntroText.module.css';
 
 const INTRO_TEXT = `Based in Ferndale, Johannesburg, 42nd Precinct Security offers security solutions in and around Gauteng. Our main clients consist of various schools, shopping centres, townhouse and building complexes, as well as buildings and office blocks. We provide security solutions in many forms, ranging from response officers to intrusion detection systems that can be remotely managed using a mobile app.
 
@@ -12,15 +13,19 @@ We further offer monthly or weekly maintenance programmes on all electronic equi
 
 We believe that with strong management of our services and a good business relationship with you, our customer, we can forge lasting mutual benefits, which we believe surpass industry standards.`;
 
-const IntroText = ({ className }) => (
-  <p className={className}>
-	{INTRO_TEXT.split('\n\n').map((paragraph, index) => (
-	  <React.Fragment key={index}>
-		{paragraph}
-		<br /><br />
-	  </React.Fragment>
-	))}
-  </p>
-);
+const IntroText = ({ className }) => {
+	return (
+		<>
+			<p className={`${styles.textLimited} ${className}`}>
+				{INTRO_TEXT.split('\n\n').map((paragraph, index) => (
+					<React.Fragment key={index}>
+						{paragraph}
+						<br /><br />
+					</React.Fragment>
+				))}
+			</p>
+		</>
+	)
+};
 
 export default IntroText;
