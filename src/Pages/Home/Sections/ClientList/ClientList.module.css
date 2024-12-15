@@ -1,0 +1,11 @@
+ol {
+    list-style-position: inside;
+    margin: 4% 0; /* Adds space around the entire list */
+}
+
+ol li {
+    margin: 2% 0;
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+

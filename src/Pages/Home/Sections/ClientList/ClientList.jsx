@@ -1,3 +1,5 @@
+import styles from './ClientList.module.css';
+
 const ClientList = () => {
 	const clients = [
 		'Complexes',
