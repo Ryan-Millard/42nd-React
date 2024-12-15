@@ -3,7 +3,7 @@ import Front from './Sides/Front/Front';
 import Back from './Sides/Back/Back';
 import styles from './BusinessCard.module.css';
 
-const BusinessCard = () => {
+const BusinessCard = ({className}) => {
 	const [isFlipped, setIsFlipped] = useState(false);
 
 	const toggleFlip = () => {
@@ -11,7 +11,7 @@ const BusinessCard = () => {
 	};
 
 	return (
-		<aside className={styles.componentContainer}>
+		<aside className={`${styles.componentContainer} ${className}`}>
 			<h2 className={`text-primary ${styles.heading}`}>Click to flip the card</h2>
 			<div className={styles.cardContainer} onClick={toggleFlip}>
 				<div className={`${styles.card} ${isFlipped ? styles.flipped : ''}`}>

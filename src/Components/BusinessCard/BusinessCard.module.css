@@ -9,6 +9,7 @@
 .heading {
 	max-width: fit-content;
 	margin-bottom: 2%; /* Add some space between the heading and the card */
+	margin-top: 0;
 }
 
 .cardContainer {
