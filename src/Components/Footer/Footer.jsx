@@ -1,11 +1,27 @@
 import React from "react";
-import { FaInstagram, FaFacebook } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
 import styles from "./Footer.module.css";
 import logo from '../../assets/42nd-precinct-logo.png';
+import { useTheme } from '@states/ThemeContext';
+import lightBackground from "@assets/light-card-background.jpg";
+import darkBackground from "@assets/card-background.jpg";
 
 const Footer = () => {
+	// change the background image based on the current theme
+	const { isDarkMode } = useTheme();
+	const background = isDarkMode ? darkBackground : lightBackground;
+
 	return (
-		<footer className={styles.footerWrapper}>
+		<footer
+			className={styles.footerWrapper}
+			style={{
+				backgroundImage: `linear-gradient(to top, rgba(0,0,0,0) 85%, var(--bg-primary)), url(${background})`,
+				backgroundRepeat: 'no-repeat',
+				backgroundPosition: 'center',
+				backgroundSize: 'cover',
+			}}
+		>
 			<div className={styles.footerLinks}>
 				<div className={styles.iconContainer}>
 					<a
@@ -14,7 +30,7 @@ const Footer = () => {
 						rel="noopener noreferrer"
 						aria-label="Instagram"
 					>
-						<FaInstagram className={styles.icon} size={40} />
+						<AiFillInstagram className={styles.icon} size={50} />
 					</a>
 
 					<a href="/" aria-label="Homepage">
