@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { ThemeProvider } from "@states/ThemeContext";
 
 import Navbar from "./Components/Navbar/Navbar";
 import Header from "./Components/Header/Header";
@@ -16,28 +17,31 @@ import "./fonts/roboto.css";
 
 function App() {
 	return (
-		<Router>
-			<div className="roboto">
-				<Navbar />
+		<ThemeProvider>
+			<Router>
+				<div className="roboto">
+					<Navbar />
 
-				<div className="pageContainer">
-					<Header />
+					<div className="pageContainer">
+						<Header />
 
-					<main>
-						<Routes>
-							<Route path="/" element={<Home />} />
-							<Route path="/contact" element={<Contact />} />
-							<Route path="/about" element={<About />} />
-							<Route path="/products-and-services" element={<ProductsAndServices />} />
-							<Route path="/careers" element={<Careers />} />
-						</Routes>
-					</main>
+						<main>
+							<Routes>
+								<Route path="/" element={<Home />} />
+								<Route path="/contact" element={<Contact />} />
+								<Route path="/about" element={<About />} />
+								<Route path="/products-and-services" element={<ProductsAndServices />} />
+								<Route path="/careers" element={<Careers />} />
+							</Routes>
+						</main>
 
-					<Footer />
+						<Footer />
+					</div>
 				</div>
-			</div>
-		</Router>
+			</Router>
+		</ThemeProvider>
 	);
 }
 
 export default App;
+
