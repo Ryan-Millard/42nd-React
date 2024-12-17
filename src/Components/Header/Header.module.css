@@ -11,15 +11,27 @@
 }
 /* Large screens */
 @media only screen and (min-width: 600px) {
-	/* Prevent the Navbar (on the side) from blocking main  content */
+	/* Prevent the Navbar (on the side) from blocking main content */
 	.headerWrapper {
 		margin-left: 5rem; /* Default navbar width */
 	}
 }
-
 
 .logo {
 	cursor: pointer;
 	height: 7dvh;
 	margin: 0;
 }
+
+/* Style for the icon */
+.icon {
+	font-size: 3rem; /* Change the size of the icon */
+	color: var(--text-secondary);
+	margin-right: 8px; /* Add spacing to the right */
+	transition: color 0.3s ease; /* Smooth color change on hover */
+}
+
+.icon:hover {
+	color: var(--text-primary); /* Change color on hover */
+}
+
