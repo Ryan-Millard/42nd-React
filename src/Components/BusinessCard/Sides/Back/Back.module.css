@@ -10,7 +10,6 @@
 
 .backWrapper {
 	max-height: 193px;
-	background: black;
 	font-family: Arial;
 }
 .backWrapper p {
@@ -40,7 +39,6 @@
 .backContent {
 	font-size: 70%;
 	margin-top: 3%;
-	background-color: var(--text-primary);
 	color: black;
 	display: flex;
 	justify-content: flex-start;

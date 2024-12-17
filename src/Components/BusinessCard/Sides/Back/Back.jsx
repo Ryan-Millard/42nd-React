@@ -1,4 +1,5 @@
 import react from 'react';
+import { useTheme } from '@states/ThemeContext';
 import styles from './Back.module.css';
 
 const ServiceList = ({title, items}) => {
@@ -13,6 +14,8 @@ const ServiceList = ({title, items}) => {
 }
 
 const Back = () => {
+	const { isDarkMode } = useTheme();
+
 	const guardingDivisionItems = [
 		'Road Closures & Boomed Areas',
 		'Security Cashiers',
@@ -41,13 +44,30 @@ const Back = () => {
 
 	return (
 		<div className={styles.back}>
-			<div className={styles.backWrapper}>
-				<div className={styles.backContent}>
+			<div
+				className={styles.backWrapper}
+				style={{
+					backgroundColor: isDarkMode ? 'black' : 'white',
+				}}
+			>
+				<div
+					className={styles.backContent}
+					style={{
+						backgroundColor: isDarkMode ? 'var(--bg-secondary)' : '#FAA61A',
+					}}
+				>
 					<ServiceList title="GUARDING DIVISION" items={guardingDivisionItems} />
 					<ServiceList title="ELECTRONIC SOLUTIONS" items={electronicSolutionsItems} />
 				</div>
 
-				<div className={styles.backFooter}>24-HOUR HOTLINE: 010 441 2509</div>
+				<div
+					className={styles.backFooter}
+					style={{
+						color: isDarkMode ? 'var(--text-primary)' : 'black',
+					}}
+				>
+					24-HOUR HOTLINE: 010 441 2509
+				</div>
 			</div>
 		</div>
 	);

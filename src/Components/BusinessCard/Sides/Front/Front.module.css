@@ -14,9 +14,6 @@
 	font-family: Arial;
 	height: 100%;
 	font-size: 85%;
-	background-image: url("../../../../assets/card-background.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
 	display: flex;
 }
 @media (min-width: 601px) {
@@ -94,17 +91,10 @@
 .frontContactDetails ul {
 	list-style: none;
 	padding: 0;
-}
-@media (min-width: 601px) {
-	.frontContactDetails {
-		color: white;
-		font-size: 80%;
-	}
+	font-size: 80%;
 }
 @media (max-width: 600px) {
 	.frontContactDetails {
-		color: white;
-		font-size: 80%;
 		height: 50%;
 	}
 }
