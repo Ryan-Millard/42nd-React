@@ -69,7 +69,7 @@
 .logoImgContainer {
 	display: none;
 	transition: left var(--transition-speed);
-	color: var(--bg-primary);
+	color: black;
 	overflow: hidden;
 }
 
