@@ -16,11 +16,9 @@
 	width: 60px;
 	height: 30px;
 	border-radius: 20px;
-	background-color: var(--bg-secondary);
+	background-color: var(--text-secondary);
 	position: relative;
-	transition: 
-		background-color var(--transition-speed) ease, 
-		box-shadow var(--transition-speed) ease;
+	transition: background-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 	border: 2px solid transparent;
 }
 
@@ -32,14 +30,12 @@
 .dot {
 	width: 24px;
 	height: 24px;
-	background-color: var(--bg-primary);
+	background-color: var(--text-tertiary);
 	border-radius: 50%;
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	transition: 
-		transform var(--transition-speed) ease, 
-		box-shadow var(--transition-speed) ease;
+	transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 	box-shadow: 0 1px 3px rgba(0,0,0,0.2);
 }
 
