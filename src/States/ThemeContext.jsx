@@ -1,58 +1,91 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useState, useEffect, useMemo, useCallback } from 'react';
 
-// Create context
-const ThemeContext = createContext();
+// CSS variables for colours in theme
+const THEME_COLORS = {
+	dark: {
+		'--text-primary': '#FAA61A',
+		'--text-secondary': '#BBBBBB',
+		'--text-tertiary': '#333333',
+		'--bg-primary': '#010101',
+		'--bg-secondary': '#FAA61A',
+		'--bg-tertiary': '#1A1A1A',
+	},
+	light: {
+		'--text-primary': '#FAA61A',
+		'--text-secondary': '#222222',
+		'--text-tertiary': '#B0B0B0',
+		'--bg-primary': '#EEEEEE',
+		'--bg-secondary': '#FAA61A',
+		'--bg-tertiary': '#F9F9F9',
+	}
+};
 
-// Create provider component
-export const ThemeProvider = ({ children }) => {
-	const getInitialTheme = () => {
+// Create context with a default value
+const ThemeContext = createContext({
+	isDarkMode: false,
+	toggleTheme: () => {}
+});
+
+const ThemeProvider = ({ children }) => {
+	// Check the user's browser to find their preferred theme
+	const getInitialTheme = useCallback(() => {
 		const savedTheme = localStorage.getItem('theme');
-		return savedTheme ? savedTheme === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
-	};
+		if (savedTheme) return savedTheme === 'dark';
+		return window.matchMedia('(prefers-color-scheme: dark)').matches;
+	}, []);
 
-	const [isDarkMode, setIsDarkMode] = useState(getInitialTheme());
+	// Use state with initial theme
+	const [isDarkMode, setIsDarkMode] = useState(getInitialTheme);
 
-	const toggleTheme = () => setIsDarkMode((prevMode) => !prevMode);
+	// Memoized toggle theme function
+	const toggleTheme = useCallback(() => {
+		setIsDarkMode(prev => !prev);
+	}, []);
 
+	// Use effect for theme application with optional cleanup
 	useEffect(() => {
 		const theme = isDarkMode ? 'dark' : 'light';
-		const themeColors = {
-			dark: {
-				'--text-primary': '#FAA61A',
-				'--text-secondary': '#BBBBBB',
-				'--text-tertiary': '#333333',
-				'--bg-primary': '#010101',
-				'--bg-secondary': '#FAA61A',
-				'--bg-tertiary': '#1A1A1A',
-			},
-			light: {
-				'--text-primary': '#FAA61A',
-				'--text-secondary': '#222222',
-				'--text-tertiary': '#B0B0B0',
-				'--bg-primary': '#EEEEEE',
-				'--bg-secondary': '#FAA61A',
-				'--bg-tertiary': '#F9F9F9',
-			}
-		};
+		const themeVariables = THEME_COLORS[theme];
 
 		// Apply theme colors
-		Object.entries(themeColors[theme]).forEach(([key, value]) => {
+		Object.entries(themeVariables).forEach(([key, value]) => {
 			document.documentElement.style.setProperty(key, value);
 		});
 
 		// Save theme to local storage
 		localStorage.setItem('theme', theme);
 		document.documentElement.setAttribute('data-theme', theme);
+
+		// Optional: Cleanup function
+		return () => {
+			Object.keys(themeVariables).forEach(key => {
+				document.documentElement.style.removeProperty(key);
+			});
+		};
 	}, [isDarkMode]);
 
+	// Memoize context value to prevent unnecessary re-renders
+	const contextValue = useMemo(() => ({
+		isDarkMode,
+		toggleTheme
+	}), [isDarkMode, toggleTheme]);
+
 	return (
-		<ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
+		<ThemeContext.Provider value={contextValue}>
 			{children}
 		</ThemeContext.Provider>
 	);
 };
 
-// Custom hook to use theme context
-const useTheme = () => useContext(ThemeContext);
+// Custom hook with error handling
+const useTheme = () => {
+	const context = useContext(ThemeContext);
+	if (context === undefined) {
+		throw new Error('useTheme must be used within a ThemeProvider');
+	}
+	return context;
+};
 
-export { ThemeContext, useTheme };
+export { ThemeContext };
+export { ThemeProvider };
+export { useTheme };
