@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Front.module.css';
-import logo from '../../../../assets/42nd-precinct-logo.png';
+import logo from '@assets/logos/42nd-precinct-logo.png';
 import { useTheme } from '@states/ThemeContext';
 import darkBackgroundImage from "@assets/card-background.jpg";
 

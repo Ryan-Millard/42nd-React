@@ -2,7 +2,7 @@ import React from "react";
 import { FaFacebook } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import styles from "./Footer.module.css";
-import logo from '../../assets/42nd-precinct-logo.png';
+import logo from '@assets/logos/42nd-precinct-logo.png';
 import { useTheme } from '@states/ThemeContext';
 import lightBackground from "@assets/light-card-background.jpg";
 import darkBackground from "@assets/card-background.jpg";

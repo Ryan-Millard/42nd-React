@@ -3,7 +3,7 @@ import { GiRotaryPhone } from "react-icons/gi";
 import ThemeToggle from './ThemeToggle';
 import { useTheme } from '@states/ThemeContext';
 import styles from "./Header.module.css";
-import logo from "@assets/42nd-precinct-logo.png";
+import logo from "@assets/logos/42nd-precinct-logo.png";
 import lightBackground from "@assets/light-card-background.jpg";
 import darkBackground from "@assets/card-background.jpg";
 

@@ -3,7 +3,7 @@ import { FaHome, FaEnvelope, FaInfoCircle, FaBox, FaBriefcase, FaAngleDoubleRigh
 import { NavLink, Link } from "react-router-dom";
 import DoubleRightArrowIcon from './DoubleRightArrowIcon';
 import styles from "./Navbar.module.css";
-import logo from '../../assets/42nd-precinct-logo.png';
+import logo from '@assets/logos/42nd-precinct-logo.png';
 
 const Navbar = () => {
 	return (
