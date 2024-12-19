@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { GiPoliceCar } from "react-icons/gi";
+import { GiRotaryPhone } from "react-icons/gi";
 import ThemeToggle from './ThemeToggle';
 import { useTheme } from '@states/ThemeContext';
 import styles from "./Header.module.css";
@@ -30,7 +30,7 @@ const Header = () => {
 
 			<a href="tel:0117916340" style={{ textDecoration: "none", color: "inherit" }}>
 				<figure style={{ display: "inline-block", textAlign: "center" }}>
-					<GiPoliceCar className={styles.icon} />
+					<GiRotaryPhone className={styles.icon} />
 				</figure>
 			</a>
 		</header>
