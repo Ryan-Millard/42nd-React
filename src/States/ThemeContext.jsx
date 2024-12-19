@@ -1,22 +1,21 @@
 import React, { createContext, useContext, useState, useEffect, useMemo, useCallback } from 'react';
 
 // CSS variables for colours in theme
+// See App.css for more root styles
 const THEME_COLORS = {
 	dark: {
-		'--text-primary': '#FAA61A',
 		'--text-secondary': '#BBBBBB',
 		'--text-tertiary': '#333333',
 		'--bg-primary': '#010101',
-		'--bg-secondary': '#FAA61A',
 		'--bg-tertiary': '#1A1A1A',
+		'--bg-tertiary-transparent': 'rgba(26, 26, 26, 0.5)',
 	},
 	light: {
-		'--text-primary': '#FAA61A',
 		'--text-secondary': '#222222',
-		'--text-tertiary': '#B0B0B0',
+		'--text-tertiary': '#777777',
 		'--bg-primary': '#EEEEEE',
-		'--bg-secondary': '#FAA61A',
 		'--bg-tertiary': '#F9F9F9',
+		'--bg-tertiary-transparent': 'rgba(249, 249, 249, 0.5)',
 	}
 };
 
