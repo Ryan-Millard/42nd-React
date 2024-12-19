@@ -56,7 +56,6 @@
 .logo {
 	font-weight: bold;
 	text-transform: uppercase;
-	text-align: center;
 	color: var(--text-secondary);
 	background: var(--bg-secondary);
 	font-size: 1.5rem;
