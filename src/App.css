@@ -1,11 +1,8 @@
+/* See States/ThemeContext.jsx for more root styles */
 :root {
 	--text-primary: #FAA61A;
-	--text-secondary: #BBBBBB;
-	--text-tertiary: #333333;
-	--bg-primary: #010101;
 	--bg-secondary: #FAA61A;
 	--bg-secondary-transparent: rgba(250, 166, 26, 0.5);
-	--bg-tertiary: #1A1A1A;
 	--transition-speed: 600ms;
 }
 
@@ -57,7 +54,7 @@ h1, h2, h3 { text-align: center; }
 }
 
 hr {
-	margin: 4% 2%;
+	margin: 4% 0;
 }
 
 .section {
