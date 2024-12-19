@@ -1,5 +1,3 @@
-import styles from './ClientList.module.css';
-
 const ClientList = ({className}) => {
 	const clients = [
 		'Complexes',
