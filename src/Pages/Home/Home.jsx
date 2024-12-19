@@ -3,6 +3,7 @@ import '../../App.css';
 import IntroSection from './Sections/Intro/IntroSection';
 import ClientListSection from './Sections/ClientList/ClientListSection';
 import MissionStatement from './Sections/MissionStatement/MissionStatement';
+import BriefHistory from './Sections/BriefHistory/BriefHistory';
 
 const Home = () => (
 	<>
@@ -15,6 +16,10 @@ const Home = () => (
 		<hr />
 
 		<MissionStatement />
+
+		<hr />
+
+		<BriefHistory />
 	</>
 );
 
