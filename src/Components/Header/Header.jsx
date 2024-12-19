@@ -3,14 +3,14 @@ import { GiRotaryPhone } from "react-icons/gi";
 import ThemeToggle from './ThemeToggle';
 import { useTheme } from '@states/ThemeContext';
 import styles from "./Header.module.css";
-import logo from "@assets/logos/42nd-precinct-logo.png";
-import lightBackground from "@assets/light-card-background.jpg";
-import darkBackground from "@assets/card-background.jpg";
+import logo from "@assets/logos/42nd_precinct_logo.png";
+import lightBackground from "@assets/backgrounds/light_checkered_steel_background.jpg";
+import darkBackgroundImage from "@assets/backgrounds/dark_checkered_steel_background.jpg";
 
 const Header = () => {
 	// change the background image based on the current theme
 	const { isDarkMode } = useTheme();
-	const background = isDarkMode ? darkBackground : lightBackground;
+	const background = isDarkMode ? darkBackgroundImage : lightBackground;
 
 	return (
 		<header

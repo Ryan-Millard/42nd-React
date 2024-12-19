@@ -2,15 +2,15 @@ import React from "react";
 import { FaFacebook } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import styles from "./Footer.module.css";
-import logo from '@assets/logos/42nd-precinct-logo.png';
+import logo from '@assets/logos/42nd_precinct_logo.png';
 import { useTheme } from '@states/ThemeContext';
-import lightBackground from "@assets/light-card-background.jpg";
-import darkBackground from "@assets/card-background.jpg";
+import lightBackground from "@assets/backgrounds/light_checkered_steel_background.jpg";
+import darkBackgroundImage from "@assets/backgrounds/dark_checkered_steel_background.jpg";
 
 const Footer = () => {
 	// change the background image based on the current theme
 	const { isDarkMode } = useTheme();
-	const background = isDarkMode ? darkBackground : lightBackground;
+	const background = isDarkMode ? darkBackgroundImage : lightBackground;
 
 	return (
 		<footer

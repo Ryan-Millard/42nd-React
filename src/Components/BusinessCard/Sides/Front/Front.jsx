@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './Front.module.css';
-import logo from '@assets/logos/42nd-precinct-logo.png';
+import logo from '@assets/logos/42nd_precinct_logo.png';
 import { useTheme } from '@states/ThemeContext';
-import darkBackgroundImage from "@assets/card-background.jpg";
+import darkBackgroundImage from "@assets/backgrounds/dark_checkered_steel_background.jpg";
 
 // Utility function for handling empty details
 const renderDetail = (detail) => (detail === '' ? '\u00A0' : detail);

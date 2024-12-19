@@ -1,4 +1,4 @@
-import responseOfficerSalute from '@assets/armed_response/response-officer-salute.jpg';
+import responseOfficerSalute from '@assets/armed_response/response_officer_salute.jpg';
 import ClientList from './ClientList';
 import styles from './ClientListSection.module.css';
 
