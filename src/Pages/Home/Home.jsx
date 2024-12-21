@@ -1,6 +1,5 @@
 import React from "react";
 import '../../App.css';
-import Hero from './Sections/Hero/Hero';
 import IntroSection from './Sections/Intro/IntroSection';
 import ClientListSection from './Sections/ClientList/ClientListSection';
 import MissionStatement from './Sections/MissionStatement/MissionStatement';
@@ -9,8 +8,6 @@ import ProductServiceOverview from './Sections/ProductServiceOverview/ProductSer
 
 const Home = () => (
 	<>
-		<Hero />
-
 		<IntroSection />
 
 		<hr />

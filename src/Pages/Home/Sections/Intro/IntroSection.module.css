@@ -1,3 +1,9 @@
+.heading {
+	margin-top: 0;
+	margin-bottom: 3%;
+	font-size: 2em;
+}
+
 .businessCardFallback {
 	display: flex;
 	justify-content: center;

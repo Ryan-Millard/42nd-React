@@ -7,9 +7,11 @@ const BusinessCard = React.lazy(() => import('@components/BusinessCard/BusinessC
 
 const IntroSection = () => (
 	<section className="section">
-		<Suspense fallback={<div className={styles.businessCardFallback}>Loading...</div>}>
-			<BusinessCard className={styles.businessCard} />
-		</Suspense>
+		<h1 className={`roboto-black-italic ${styles.heading}`}>Honesty, Integrity & Trust</h1>
+
+			<Suspense fallback={<div className={styles.businessCardFallback}>Loading...</div>}>
+				<BusinessCard className={styles.businessCard} />
+			</Suspense>
 
 		<IntroText className="section-text" />
 
