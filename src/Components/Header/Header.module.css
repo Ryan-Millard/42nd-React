@@ -1,35 +1,54 @@
 .headerWrapper {
-  padding-top: 1%;
-  padding-bottom: 1.5%;
-  margin: 0;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+	padding-top: 1%;
+	padding-bottom: 1.5%;
+	margin: 0;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
 }
 
 /* Large screens */
 @media only screen and (min-width: 600px) {
-  /* Prevent the Navbar (on the side) from blocking main content */
-  .headerWrapper {
-    margin-left: 5rem; /* Default navbar width */
-  }
+	/* Prevent the Navbar (on the side) from blocking main content */
+	.headerWrapper {
+		margin-left: 5rem; /* Default navbar width */
+	}
 }
 
 .logo {
-  cursor: pointer;
-  height: 7dvh;
-  margin: 0;
+	cursor: pointer;
+	height: 7dvh;
+	margin: 0;
 }
 
 /* Style for the icon */
 .icon {
-  font-size: 3rem; /* Change the size of the icon */
-  color: var(--text-secondary);
-  margin-right: 8px; /* Add spacing to the right */
-  transition: color 0.3s ease; /* Smooth color change on hover */
+	font-size: 3rem;
+	transition: color 0.3s ease;
 }
 
-.icon:hover {
-  color: var(--text-primary); /* Change color on hover */
+.telephoneLink {
+	text-decoration: none;
+	color: var(--text-secondary);
+	display: inline-flex;
+	align-items: center;
+	transition: color 0.3s ease;
 }
 
+.telephoneLink:hover .icon,
+.telephoneLink:hover .hotline {
+	color: var(--text-primary);
+}
+
+.telephoneFigure {
+	display: inline-block;
+	text-align: center;
+	margin: 0;
+}
+
+.hotline {
+	text-align: center;
+	font-style: normal;
+	color: var(--text-secondary);
+	transition: color 0.3s ease;
+}

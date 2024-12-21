@@ -28,9 +28,10 @@ const Header = () => {
 				<img className={styles.logo} src={logo} alt="logo" />
 			</Link>
 
-			<a href="tel:0117916340" style={{ textDecoration: "none", color: "inherit" }}>
-				<figure style={{ display: "inline-block", textAlign: "center" }}>
+			<a href="tel:0117916340" className={styles.telephoneLink}>
+				<figure className={styles.telephoneFigure}>
 					<GiRotaryPhone className={styles.icon} />
+					<figcaption className={ `roboto-black ${styles.hotline}` }>011 791 6340</figcaption>
 				</figure>
 			</a>
 		</header>
