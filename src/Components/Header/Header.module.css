@@ -29,15 +29,15 @@
 
 .telephoneLink {
 	text-decoration: none;
-	color: var(--text-secondary);
+	color: var(--text-primary);
 	display: inline-flex;
 	align-items: center;
-	transition: color 0.3s ease;
+	transition: transform 0.3s ease;
 }
 
 .telephoneLink:hover .icon,
 .telephoneLink:hover .hotline {
-	color: var(--text-primary);
+	transform: scale(1.2); /* Increases the size by 20% */
 }
 
 .telephoneFigure {
@@ -49,6 +49,6 @@
 .hotline {
 	text-align: center;
 	font-style: normal;
-	color: var(--text-secondary);
+	color: var(--text-primary);
 	transition: color 0.3s ease;
 }
