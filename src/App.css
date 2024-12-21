@@ -1,0 +1,88 @@
+/* See States/ThemeContext.jsx for more root styles */
+:root {
+	--text-primary: #FAA61A;
+	--bg-secondary: #FAA61A;
+	--bg-secondary-transparent: rgba(250, 166, 26, 0.5);
+	--transition-speed: 600ms;
+}
+
+html, body {
+	height: 100%;
+	color: var(--text-secondary);
+	margin: 0;
+}
+
+main {
+	background-color: var(--bg-primary);
+	padding: 3%;
+}
+@media only screen and (min-width: 600px) {
+	/* Prevent the Navbar (on the side) from blocking main  content */
+	main {
+		margin-left: 5rem; /* Default navbar width */
+	}
+}
+
+/* Text color utilities */
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+
+/* Background color utilities */
+.bg-primary { background-color: var(--bg-primary); }
+.bg-secondary { background-color: var(--bg-secondary); }
+
+/* Border color utilities */
+.border-primary { border-color: var(--text-primary); }
+.border-secondary { border-color: var(--text-secondary); }
+
+::selection {
+	background: var(--text-tertiary);
+	color: var(--text-primary);
+}
+::-moz-selection {
+	background: var(--text-tertiary);
+	color: var(--text-primary);
+}
+
+h1, h2, h3 { text-align: center; }
+
+/* Use grid to create a full-height layout */
+.pageContainer {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	min-height: 100vh;
+}
+
+hr {
+	margin: 4% 0;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-text {
+	line-height: 1.6;
+	letter-spacing: 0.05em;
+	margin: 0;
+}
+
+/* For Link elements from react-router-dom */
+.link {
+	text-decoration: none;
+	color: var(--text-secondary);
+	background-color: var(--bg-secondary-transparent);
+	padding: 0.5% 1%;
+	border-radius: 5px;
+	cursor: pointer;
+	display: inline-block;
+	margin: 0 auto;
+	text-align: center;
+	font-weight: bold;
+}
+.link:hover {
+	color: var(--text-tertiary);
+	background-color: var(--bg-secondary);
+}

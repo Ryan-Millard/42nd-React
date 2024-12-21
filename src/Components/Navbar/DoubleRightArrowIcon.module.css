@@ -1,0 +1,10 @@
+/* 2 colors similar var(--text-primary) */
+.faPrimary { color: #ffd083; }	/* Lighter */
+.faSecondary { color: #cf8a17; }	/* Darker */
+
+/* Ensure the arrow icon has the right transition */
+.arrowIcon {
+  position: absolute;
+  right: 0;
+}
+

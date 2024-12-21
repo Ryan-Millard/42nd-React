@@ -1,0 +1,54 @@
+.headerWrapper {
+	padding-top: 1%;
+	padding-bottom: 1.5%;
+	margin: 0;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+	/* Prevent the Navbar (on the side) from blocking main content */
+	.headerWrapper {
+		margin-left: 5rem; /* Default navbar width */
+	}
+}
+
+.logo {
+	cursor: pointer;
+	height: 7dvh;
+	margin: 0;
+}
+
+/* Style for the icon */
+.icon {
+	font-size: 3rem;
+	transition: color 0.3s ease;
+}
+
+.telephoneLink {
+	text-decoration: none;
+	color: var(--text-primary);
+	display: inline-flex;
+	align-items: center;
+	transition: transform 0.3s ease;
+}
+
+.telephoneLink:hover .icon,
+.telephoneLink:hover .hotline {
+	transform: scale(1.2); /* Increases the size by 20% */
+}
+
+.telephoneFigure {
+	display: inline-block;
+	text-align: center;
+	margin: 0;
+}
+
+.hotline {
+	text-align: center;
+	font-style: normal;
+	color: var(--text-primary);
+	transition: color 0.3s ease;
+}

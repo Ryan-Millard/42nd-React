@@ -1,0 +1,65 @@
+.toggleWrapper {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	user-select: none;
+	outline: none;
+}
+
+.toggleWrapper:focus-visible {
+	outline: 2px solid var(--bg-secondary);
+	outline-offset: 2px;
+}
+
+.toggleButton {
+	width: 60px;
+	height: 30px;
+	border-radius: 20px;
+	background-color: var(--text-secondary);
+	position: relative;
+	transition: background-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+	border: 2px solid transparent;
+}
+
+.toggleButton:hover {
+	background-color: color-mix(in srgb, var(--bg-secondary) 80%, white);
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.dot {
+	width: 24px;
+	height: 24px;
+	background-color: var(--text-tertiary);
+	border-radius: 50%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.dark .dot {
+	transform: translateX(30px) translateY(-50%);
+}
+
+.light .dot {
+	transform: translateX(4px) translateY(-50%);
+}
+
+.icon {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 16px;
+	color: var(--text-tertiary);
+	transition: color var(--transition-speed) ease;
+}
+
+.leftIcon {
+	left: 8px; /* Position for moon icon (dark mode) */
+}
+
+.rightIcon {
+	right: 8px; /* Position for sun icon (light mode) */
+}
