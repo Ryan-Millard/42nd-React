@@ -19,7 +19,7 @@ import "./fonts/roboto.css";
 function App() {
 	return (
 		<ThemeProvider>
-			<Router basename="/42nd-React/">
+			<Router>
 				<div className="roboto">
 					<Navbar />
 
