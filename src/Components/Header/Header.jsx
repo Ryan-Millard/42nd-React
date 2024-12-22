@@ -1,3 +1,4 @@
+import { useEffect, useState, useRef } from 'react';
 import { Link } from "react-router-dom";
 import { GiRotaryPhone } from "react-icons/gi";
 import ThemeToggle from './ThemeToggle';
@@ -10,13 +11,41 @@ import darkBackgroundImage from "@assets/backgrounds/dark_checkered_steel_backgr
 const Header = () => {
 	// change the background image based on the current theme
 	const { isDarkMode } = useTheme();
-	const background = isDarkMode ? darkBackgroundImage : lightBackground;
+	const [background, setBackground] = useState('');
+	const headerRef = useRef(null);
+
+	// Lazy load background image
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				if (entry.isIntersecting) {
+					const bgImage = isDarkMode ? darkBackgroundImage : lightBackground;
+					setBackground(bgImage);
+					observer.disconnect(); // Stop observing once background is set
+				}
+			},
+			{ threshold: 0.1 } // Load when 10% of the header is visible
+		);
+
+		if (headerRef.current) {
+			observer.observe(headerRef.current);
+		}
+
+		return () => {
+			if (headerRef.current) {
+				observer.unobserve(headerRef.current);
+			}
+		};
+	}, [isDarkMode]);
 
 	return (
 		<header
+			ref={headerRef}
 			className={styles.headerWrapper}
 			style={{
-				backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0) 85%, var(--bg-primary)), url(${background})`,
+				backgroundImage: background
+					? `linear-gradient(to bottom, rgba(0,0,0,0) 85%, var(--bg-primary)), url(${background})`
+					: 'none',
 				backgroundRepeat: 'no-repeat',
 				backgroundPosition: 'center',
 				backgroundSize: 'cover',
@@ -39,3 +68,4 @@ const Header = () => {
 };
 
 export default Header;
+
