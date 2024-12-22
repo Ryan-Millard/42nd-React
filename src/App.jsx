@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import { ThemeProvider } from "@states/ThemeContext";
 
 import Navbar from "./Components/Navbar/Navbar";
@@ -11,6 +11,7 @@ import Contact from "./Pages/Contact/Contact";
 import About from "./Pages/About/About";
 import ProductsAndServices from "./Pages/ProductsAndServices/ProductsAndServices";
 import Careers from "./Pages/Careers/Careers";
+import NotFound from "./Pages/404/NotFound";
 
 import "./App.css";
 import "./fonts/roboto.css";
@@ -32,6 +33,8 @@ function App() {
 								<Route path="/about" element={<About />} />
 								<Route path="/products-and-services" element={<ProductsAndServices />} />
 								<Route path="/careers" element={<Careers />} />
+
+								<Route path="*" element={<NotFound />} />
 							</Routes>
 						</main>
 
