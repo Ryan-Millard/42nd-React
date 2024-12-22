@@ -20,9 +20,9 @@ const Home = () => (
 
 		<hr />
 
-		<BriefHistory />
-
 		<ProductServiceOverview />
+
+		<BriefHistory />
 	</>
 );
 
