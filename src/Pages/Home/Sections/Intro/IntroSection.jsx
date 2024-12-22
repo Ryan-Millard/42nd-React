@@ -9,9 +9,9 @@ const IntroSection = () => (
 	<section className="section">
 		<h1 className={`roboto-black-italic ${styles.heading}`}>Honesty, Integrity & Trust</h1>
 
-			<Suspense fallback={<div className={styles.businessCardFallback}>Loading...</div>}>
-				<BusinessCard className={styles.businessCard} />
-			</Suspense>
+		<Suspense fallback={<div className={styles.businessCardFallback}>Loading...</div>}>
+			<BusinessCard className={styles.businessCard} />
+		</Suspense>
 
 		<IntroText className="section-text" />
 
