@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FaFacebook } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import styles from "./Footer.module.css";
@@ -33,13 +34,9 @@ const Footer = () => {
 						<AiFillInstagram className={styles.icon} size={50} />
 					</a>
 
-					<a href="/" aria-label="Homepage">
-						<img
-							className={styles.logo}
-							src={logo}
-							alt="42nd Precinct Security Logo"
-						/>
-					</a>
+					<Link to="/">
+						<img className={styles.logo} src={logo} alt="logo" />
+					</Link>
 
 					<a
 						href="https://www.facebook.com/42ndprecinct"
