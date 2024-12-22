@@ -11,15 +11,17 @@ const Home = () => (
 	<>
 		<Hero />
 
+		<hr />
+
+		<MissionStatement />
+
+		<hr />
+
 		<IntroSection />
 
 		<hr />
 
 		<ClientListSection />
-
-		<hr />
-
-		<MissionStatement />
 
 		<hr />
 
