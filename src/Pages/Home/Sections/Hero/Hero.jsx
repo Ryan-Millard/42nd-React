@@ -8,7 +8,7 @@ const Hero = () => (
 		<h1 className={`roboto-black-italic ${styles.heading}`}>Honesty, Integrity & Trust</h1>
 
 		<Suspense fallback={<div className={styles.businessCardFallback}>Loading...</div>}>
-			<BusinessCard className={styles.businessCard} />
+			<BusinessCard />
 		</Suspense>
 	</section>
 );
