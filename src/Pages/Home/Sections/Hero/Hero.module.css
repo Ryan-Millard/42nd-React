@@ -1,0 +1,35 @@
+.heading {
+	margin-top: 0;
+	margin-bottom: 3%;
+	font-size: 2em;
+}
+@media only screen and (min-width: 530px) {
+	.heading {
+		font-size: 2.5em;
+	}
+}
+@media only screen and (min-width: 700px) {
+	.heading {
+		font-size: 3em;
+	}
+}
+@media only screen and (min-width: 900px) {
+	.heading {
+		font-size: 4em;
+	}
+}
+
+.businessCardFallback {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 333px;
+	max-width: 90vw;
+	height: 227px;
+	border-radius: 5px;
+	background: var(--bg-tertiary);
+}
+
+.businessCard {
+	margin-bottom: 5%;
+}
