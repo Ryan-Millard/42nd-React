@@ -4,7 +4,7 @@ import path from 'path'; // Import path to resolve aliases
 
 // https://vite.dev/config/
 export default defineConfig({
-	base: '/42nd-Precinct/',
+	base: '/42nd-React/',
 	plugins: [react()],
 	resolve: {
 		alias: {
