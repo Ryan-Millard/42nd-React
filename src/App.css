@@ -76,8 +76,8 @@ hr {
 /* For Link elements from react-router-dom */
 .link {
 	text-decoration: none;
-	color: var(--text-secondary);
-	background-color: var(--bg-secondary-transparent);
+	color: var(--text-primary);
+	background-color: var(--bg-tertiary);
 	padding: 0.5% 1%;
 	border-radius: 5px;
 	cursor: pointer;
@@ -87,6 +87,6 @@ hr {
 	font-weight: bold;
 }
 .link:hover {
-	color: var(--text-tertiary);
-	background-color: var(--bg-secondary);
+	color: var(--bg-tertiary);
+	background-color: var(--text-primary);
 }
