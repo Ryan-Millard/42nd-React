@@ -62,7 +62,10 @@ hr {
 	flex-direction: column;
 	align-items: center;
 }
-
+.section h2 {
+	margin-top: 0;
+	font-size: 2rem;
+}
 .section-text {
 	font-size: 1.125rem;
 	line-height: 1.6;
