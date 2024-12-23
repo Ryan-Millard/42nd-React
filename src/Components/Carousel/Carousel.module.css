@@ -1,0 +1,150 @@
+.wrapper {
+	width: 100%;
+	max-width: 90rem;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.galleryContainer {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	touch-action: pan-y pinch-zoom;
+}
+
+.carouselTrack {
+	display: grid;
+	grid-template-columns: repeat(var(--slides-to-show), 1fr);
+	gap: 1rem;
+	padding: 1rem;
+	will-change: transform;
+	transform: translateX(0);
+	transition: transform 0.3s ease-out;
+}
+
+.imageContainer {
+	width: 100%;
+	aspect-ratio: 16/9;
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+	user-select: none;
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+}
+
+.image {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	transition: transform 0.3s ease;
+	pointer-events: none;
+}
+
+.imageContainer:hover .image {
+	transform: scale(1.05);
+}
+
+.fullscreen {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 1000;
+	background: #000;
+	padding-top: 1rem;
+}
+
+.fullscreen .imageContainer {
+	height: 80vh;
+}
+
+.navButton {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: var(--bg-tertiary);
+	color: var(--text-primary);
+	padding: 0.5rem;
+	padding-top: 1rem;
+	border: none;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	font-size: 1.5rem;
+	border-radius: 0.25rem;
+	opacity: 0.8;
+}
+
+.navButton:hover {
+	background-color: var(--text-primary);
+	color: var(--bg-tertiary);
+	opacity: 1;
+}
+
+.prevButton {
+	left: 0;
+}
+
+.nextButton {
+	right: 0;
+}
+
+.controls {
+	display: flex;
+	justify-content: flex-end;
+	gap: 0.5rem;
+}
+
+.controlButton {
+	background-color: var(--bg-tertiary);
+	color: var(--text-primary);
+	border: none;
+	padding: 0.5rem;
+	border-radius: 0.25rem;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+	opacity: 0.8;
+}
+
+.controlButton:hover {
+	background-color: var(--text-primary);
+	color: var(--bg-tertiary);
+	opacity: 1;
+}
+
+.dotsContainer {
+	display: flex;
+	justify-content: center;
+	gap: 0.5rem;
+	padding: 0.5rem;
+	width: fit-content;
+	margin: 0 auto;
+	background-color: var(--bg-tertiary);
+	border-radius: 20px;
+}
+
+.dot {
+	width: 0.5rem;
+	height: 0.5rem;
+	border-radius: 50%;
+	background-color: var(--text-secondary);
+	border: none;
+	padding: 0;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+.activeDot {
+	background-color: var(--text-primary);
+}
+
+@media (max-width: 1024px) {
+	.carouselTrack {
+		--slides-to-show: 2;
+	}
+}
+
+@media (max-width:
