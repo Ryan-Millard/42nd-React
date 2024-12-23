@@ -1,3 +1,25 @@
 .heading {
 	margin-top: 0;
+	font-size: 2rem;
+}
+
+.pText {
+	margin-bottom: 2rem;
+	color: var(--text-secondary);
+}
+
+.businessCardFallback {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	max-width: 333px;
+	aspect-ratio: 333/223;
+	border-radius: 5px;
+	background: var(--bg-tertiary);
+	color: var(--text-primary);
+	font-size: 1.25rem;
+	padding: 1rem;
+	margin: 0 auto;
+	box-shadow: 0 4px 8px var(--bg-tertiary);
 }

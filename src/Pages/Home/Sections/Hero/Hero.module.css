@@ -18,13 +18,3 @@
 		font-size: 4em;
 	}
 }
-
-.businessCardFallback {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 333px;
-	aspect-ratio: 333/223;
-	border-radius: 5px;
-	background: var(--bg-tertiary);
-}
