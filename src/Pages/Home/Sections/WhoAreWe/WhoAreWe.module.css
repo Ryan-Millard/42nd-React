@@ -1,0 +1,67 @@
+.halfSplit {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 2rem;
+	align-items: stretch;
+}
+
+.halfSplit > * {
+	flex: 1;
+}
+
+.image {
+	width: 100%;
+	max-width: 50%; /* Ensures the image doesn't exceed 500px */
+	height: auto; /* Adjust height automatically to maintain aspect ratio */
+	object-fit: cover;
+	border-radius: 8px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.textContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 1rem;
+}
+
+.paragraph {
+	margin-bottom: 1.5rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+	.halfSplit {
+		flex-direction: column;
+	}
+
+	.image {
+		max-width: 70vw; /* Full width on smaller screens */
+		margin: 0 auto;
+	}
+
+	.textContainer {
+		justify-content: flex-start;
+	}
+
+	.paragraph {
+		font-size: 0.9rem; /* Adjust font size for better readability */
+	}
+}
+
+@media (max-width: 480px) {
+	.paragraph {
+		font-size: 0.8rem; /* Further reduce font size on very small screens */
+	}
+
+	/* Optional: Reduce padding/margins on smaller screens for a more compact layout */
+	.section {
+		padding: 1rem;
+	}
+
+	.image {
+		margin: 0 auto;
+	}
+}
+

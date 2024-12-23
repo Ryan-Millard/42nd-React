@@ -2,7 +2,7 @@ import React from "react";
 import '../../App.css';
 import Hero from './Sections/Hero/Hero';
 import MissionStatement from './Sections/MissionStatement/MissionStatement';
-import IntroSection from './Sections/Intro/IntroSection';
+import WhoAreWe from './Sections/WhoAreWe/WhoAreWe';
 import ClientListSection from './Sections/ClientList/ClientListSection';
 import BriefHistory from './Sections/BriefHistory/BriefHistory';
 import ProductServiceOverview from './Sections/ProductServiceOverview/ProductServiceOverview';
@@ -17,7 +17,7 @@ const Home = () => (
 
 		<hr />
 
-		<IntroSection />
+		<WhoAreWe />
 
 		<hr />
 
