@@ -16,7 +16,7 @@
 	font-size: 85%;
 	display: flex;
 }
-@media (min-width: 601px) {
+ @media only screen and (min-width: 601px) {
 	.frontWrapper {
 		max-width: 360px;
 		max-height: calc(360 * 5 / 9); /* This maintains a 9:5 width:height ratio */
@@ -48,17 +48,17 @@
 #frontFooterLeft {
 	font-size: 100%;
 }
-@media (min-width: 601px) {
+ @media only screen and (min-width: 601px) {
 	.frontFooter {
 		font-size: 79%;
 	}
 }
-@media (max-width: 600px) {
+ @media only screen and (max-width: 600px) {
 	#frontFooterRight {
 		font-size: 75%;
 	}
 }
-@media (max-width: 376px) {
+ @media only screen and (max-width: 376px) {
 	.frontFooter {
 		bottom: 10%;
 	}
@@ -93,7 +93,7 @@
 	padding: 0;
 	font-size: 80%;
 }
-@media (max-width: 600px) {
+ @media only screen and (max-width: 600px) {
 	.frontContactDetails {
 		height: 50%;
 	}

@@ -31,7 +31,7 @@
 }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 768px) {
+ @media only screen and (max-width: 768px) {
 	.halfSplit {
 		flex-direction: column;
 	}
@@ -50,7 +50,7 @@
 	}
 }
 
-@media (max-width: 480px) {
+ @media only screen and (max-width: 480px) {
 	.paragraph {
 		font-size: 0.8rem; /* Further reduce font size on very small screens */
 	}
